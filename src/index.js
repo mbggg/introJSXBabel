@@ -6,8 +6,12 @@
 // Begin by creating a variable for React set equal to require("react")
 // require("react"): calls the react dependency
 // repeat for the react dom dependency
-var React = require("react"); // mandatory
-var ReactDOM = require("react-dom");
+// var React = require("react"); // mandatory, however  the NEW way to do this is by using "import"
+// var ReactDOM = require("react-dom");
+
+// Using "import"
+import React from "react";
+import ReactDOM from "react-dom";
 
 // to create something on screen, we use the render function
 // the render function takes 3 inputs...
