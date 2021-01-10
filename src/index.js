@@ -6,8 +6,8 @@
 // Begin by creating a variable for React set equal to require("react")
 // require("react"): calls the react dependency
 // repeat for the react dom dependency
-// var React = require("react"); // mandatory, however  the NEW way to do this is by using "import"
-// var ReactDOM = require("react-dom");
+/* var React = require("react"); // mandatory, however  the NEW way to do this is by using "import" */
+/* var ReactDOM = require("react-dom"); */
 
 // Using "import"
 import React from "react";
@@ -20,5 +20,18 @@ import ReactDOM from "react-dom";
 //     which we'll target inside the index.html file, which will be the id of "root" div
 // 3 - calback to tell when that render function has completed (but we won't use it)
 // ex: .render(WHAT TO SHOW, WHERE TO SHOW IT);
-ReactDOM.render(<h1>Hello Goons!</h1>, document.getElementById("root"));
+
+/* ReactDOM.render(<h1>Hello Goons!</h1>, document.getElementById("root")); */
+
 // ^ We've used the ReactDOM module's ***render method*** in order to display ta h1 inside the root div
+// note that render can only take a single html element
+
+// displaying 2 html elements using the render function
+ReactDOM.render(
+  // place the 2 html elements inside a div as a div counts as a single element!
+  <div>
+    <h1>Hello Goons!</h1>
+    <p>This is a paragraph.</p>
+  </div>,
+  document.getElementById("root")
+);
